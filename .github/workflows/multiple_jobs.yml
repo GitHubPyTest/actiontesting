@@ -1,9 +1,7 @@
 name: Multiple Jobs Example
 on:
   workflow_dispatch: {}        
-  push:
-      branches:
-        - master
+
         
 jobs:
   lib_000000:
