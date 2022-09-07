@@ -194,7 +194,6 @@ jobs:
 
   Cleanup:
     runs-on: ubuntu-18.04
-    needs: [ demo ]
     steps:
       - uses: geekyeggo/delete-artifact@v1
         with:
