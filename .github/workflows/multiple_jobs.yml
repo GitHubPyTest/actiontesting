@@ -192,15 +192,15 @@ jobs:
         working-directory: multiple_jobs/build
         run: ./demo
 
-  Cleanup:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: geekyeggo/delete-artifact@v1
-        with:
-          name: |
-            file_lib_000000
-            file_lib_000001
-            file_lib_000002
-            file_lib_000003
-            file_lib_000004
+  # Cleanup:
+  #   runs-on: ubuntu-18.04
+  #   steps:
+  #     - uses: geekyeggo/delete-artifact@v1
+  #       with:
+  #         name: |
+  #           file_lib_000000
+  #           file_lib_000001
+  #           file_lib_000002
+  #           file_lib_000003
+  #           file_lib_000004
 
