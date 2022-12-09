@@ -34,4 +34,4 @@ jobs:
           name: artifacts
           path: |
             simple_action/build/demo
-          retention-days: 1
+          retention-days: 7
