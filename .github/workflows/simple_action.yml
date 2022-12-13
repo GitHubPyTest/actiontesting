@@ -1,19 +1,23 @@
 name: Simple Action Example
 on:
-  workflow_dispatch: {}        
+  workflow_dispatch:
+    inputs:
+      artifact_name:
+        description: "name to give artifact product"
+        default: "artifactsXX"
   push:
       branches:
         - master
 
 jobs:
   BuildAndTest:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     defaults:
       run:
         shell: bash
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - run: mkdir build
         working-directory: simple_action/
       - name: CMake
@@ -29,9 +33,9 @@ jobs:
 ##
 ## Artifacts
 ##
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
-          name: artifacts
+          name: ${{ inputs.artifact_name }}
           path: |
             simple_action/build/demo
           retention-days: 7
