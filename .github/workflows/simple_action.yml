@@ -8,6 +8,7 @@ on:
   push:
       branches:
         - master
+        - non-workflow-dispatch-artifact
 
 jobs:
   BuildAndTest:
@@ -33,9 +34,10 @@ jobs:
 ##
 ## Artifacts
 ##
-      - uses: actions/upload-artifact@v3
+      - name: "Upload"
+        uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.artifact_name }}
+          name: ${{ inputs.artifact_name || 'artifacts' }}
           path: |
             simple_action/build/demo
           retention-days: 7
