@@ -8,7 +8,7 @@ jobs:
       ##
       ##
       ##
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       defaults:
         run:
           shell: bash
@@ -33,7 +33,7 @@ jobs:
       ##
       ##
       ##
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       defaults:
         run:
           shell: bash
@@ -58,7 +58,7 @@ jobs:
       ##
       ##
       ##
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       defaults:
         run:
           shell: bash
@@ -84,7 +84,7 @@ jobs:
       ##
       ##
       ##
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       defaults:
         run:
           shell: bash
@@ -110,7 +110,7 @@ jobs:
       ##
       ##
       ##
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       defaults:
         run:
           shell: bash
@@ -138,7 +138,7 @@ jobs:
   ##
   demo:
     needs: [ lib_000000, lib_000001, lib_000002, lib_000003, lib_000004 ]
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
@@ -193,7 +193,7 @@ jobs:
         run: ./demo
 
   # Cleanup:
-  #   runs-on: ubuntu-18.04
+  #   runs-on: ubuntu-latest
   #   steps:
   #     - uses: geekyeggo/delete-artifact@v1
   #       with:
